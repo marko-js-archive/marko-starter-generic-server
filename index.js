@@ -10,7 +10,8 @@ exports.install = (pluginContext) => {
   Object.assign(pluginContext.models.Project.properties, {
     httpPort: {
       type: 'integer',
-      description: 'HTTP port number to listen on'
+      description: 'HTTP port number to listen on',
+      defaultValue: 8080
     },
 
     sslCert: {
