@@ -7,7 +7,7 @@ exports.provides = [
 ];
 
 exports.install = (pluginContext) => {
-  Object.assign(pluginContext.Project.properties, {
+  Object.assign(pluginContext.models.Project.properties, {
     httpPort: {
       type: 'integer',
       description: 'HTTP port number to listen on'
