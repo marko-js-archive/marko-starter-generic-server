@@ -11,7 +11,7 @@ exports.install = (pluginContext) => {
     httpPort: {
       type: 'integer',
       description: 'HTTP port number to listen on',
-      defaultValue: 8080
+      default: 8080
     },
 
     sslCert: {
