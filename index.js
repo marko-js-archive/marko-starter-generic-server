@@ -1,3 +1,5 @@
+'use strict';
+
 const HttpServer = require('./HttpServer');
 
 exports.name = 'generic-http-server';

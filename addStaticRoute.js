@@ -1,3 +1,5 @@
+'use strict';
+
 const send = require('send');
 
 function _cors (rest) {

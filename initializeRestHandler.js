@@ -1,3 +1,5 @@
+'use strict';
+
 const _padRight = require('pad-right');
 
 module.exports = (httpServer) => {
