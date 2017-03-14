@@ -1,6 +1,6 @@
 {
   "name": "marko-starter-generic-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "marko-starter plugin that provides generic HTTP server",
   "main": "index.js",
   "repository": {},
