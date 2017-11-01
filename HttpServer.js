@@ -47,20 +47,19 @@ module.exports = class HttpServer {
   }
 
   start () {
-    let ssl = false;
     const project = this.project;
 
     _initializeRestHandler(this);
     _loadRoutes(this);
 
-    return _startHttpServer(this).then(() => {
+    return _startHttpServer(this).then((sslEnabled) => {
       if (process.send) {
         // We were launched by browser-refresh so tell the parent process
         // that we are ready...
         process.send('online');
       }
 
-      let selfUri = ssl
+      let selfUri = sslEnabled
         ? 'https://localhost'
         : 'http://localhost';
 

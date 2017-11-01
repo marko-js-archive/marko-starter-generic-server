@@ -53,7 +53,7 @@ module.exports = (httpServer) => {
       if (err) {
         reject(err);
       } else {
-        resolve();
+        resolve(ssl);
       }
     });
   });
