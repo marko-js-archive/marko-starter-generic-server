@@ -7,6 +7,7 @@ module.exports = (httpServer) => {
   const logger = httpServer.logger;
   const requestLogger = httpServer.requestLogger;
   const colorsEnabled = project.getColors();
+  const routeNotFound = project.getRouteNotFound();
 
   httpServer.restHandler
     .on('route', (event) => {
@@ -39,6 +40,10 @@ module.exports = (httpServer) => {
     })
 
     .on('routeNotFound', (req, res) => {
-      requestLogger.info('NOT FOUND: ' + req.method + ' ' + req.url);
+      if (routeNotFound) {
+        routeNotFound(req, res);
+      } else {
+        requestLogger.info('NOT FOUND: ' + req.method + ' ' + req.url);
+      }
     });
 };

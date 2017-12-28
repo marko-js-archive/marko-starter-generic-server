@@ -24,6 +24,11 @@ exports.install = (pluginContext) => {
     sslKey: {
       type: String,
       description: 'Path to private SSL key (optional)'
+    },
+
+    routeNotFound: {
+      type: Function,
+      description: 'Function to handle missing routes (optional)'
     }
   });
 };
