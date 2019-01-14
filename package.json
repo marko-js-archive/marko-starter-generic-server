@@ -13,6 +13,6 @@
   "dependencies": {
     "pad-right": "^0.2.2",
     "rest-handler": "^1.2.16",
-    "send": "^0.14.2"
+    "send": "^0.16.2"
   }
 }
