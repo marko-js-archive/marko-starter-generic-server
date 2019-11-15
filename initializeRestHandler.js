@@ -7,7 +7,12 @@ module.exports = (httpServer) => {
   const logger = httpServer.logger;
   const requestLogger = httpServer.requestLogger;
   const colorsEnabled = project.getColors();
+  const middleware = project.getMiddleware();
   const routeNotFound = project.getRouteNotFound();
+
+  if (middleware) {
+    httpServer.restHandler.middleware(middleware);
+  }
 
   httpServer.restHandler
     .on('route', (event) => {

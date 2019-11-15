@@ -26,6 +26,11 @@ exports.install = (pluginContext) => {
       description: 'Path to private SSL key (optional)'
     },
 
+    middleware: {
+      type: Object,
+      description: 'Object to install middleware'
+    },
+
     routeNotFound: {
       type: Function,
       description: 'Function to handle missing routes (optional)'
