@@ -18,6 +18,7 @@ function _fixRoute (route, project) {
       project: project,
       route: route,
       out: rest.res,
+      headers: rest.req.headers,
       params: rest.params,
       query: rest.url.query,
       handler: origHandler
