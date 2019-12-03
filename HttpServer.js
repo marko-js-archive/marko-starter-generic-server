@@ -17,6 +17,7 @@ function _fixRoute (route, project) {
     buildRoute({
       project: project,
       route: route,
+      req: rest.req,
       out: rest.res,
       headers: rest.req.headers,
       params: rest.params,
